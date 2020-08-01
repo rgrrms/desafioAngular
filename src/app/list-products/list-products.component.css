@@ -1,0 +1,23 @@
+
+li {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+li span {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.btn {
+    margin: 10px;
+}

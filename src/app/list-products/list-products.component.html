@@ -1,0 +1,8 @@
+<h2>Produtos({{countProducts || 0}})</h2>
+<ul>
+    <li *ngFor="let product of products">
+        <span class="name">{{product.name}}</span>
+        <button type="button" class="btn btn-info" (click)="details(product.id)">Detalhes</button>
+        <button type="button" class="btn btn-danger" (click)="delete(product.id)">Excluir</button>
+    </li>
+</ul>

@@ -1,0 +1,28 @@
+<button class="btn" type="button" (click)="logout()">Logout</button>
+<div>
+    <div class="col-md-12">
+        <h2>Cadastrar Produtos</h2>
+        <form action="" method="post" (ngSubmit)="add(form)" #form="ngForm" novalidate>
+            <div class="form-group">
+                <label for="product">Produto</label>
+                <input type="text" name="product" [(ngModel)]="product.name"  #name="ngModel" required product>
+                
+                <div class="error" *ngIf="form.submitted && product.invalid">
+                    <p class="alert alert-danger" *ngIf="product.errors.required">Este campo é obrigatório!</p>
+                    <p class="alert alert-danger" *ngIf="product.errors.product">Produto invalido!</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Descrição</label>
+                <input type="text" name="description" [(ngModel)]="product.description" #description="ngModel" required>
+
+                <div class="error" *ngIf="form.submitted && description.invalid">
+                    <p class="alert alert-danger" *ngIf="pass.errors.required">Este campo é obrigatório!</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Adicionar</button>
+            </div>
+        </form>
+    </div>
+</div>
